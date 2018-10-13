@@ -1,4 +1,4 @@
-import Vue from 'vue/dist/esm';
+import Vue from 'vue/dist/vue.esm';
 
 const app = new Vue({
     el: "#app",
