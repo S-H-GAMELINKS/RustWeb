@@ -1,27 +1,18 @@
 extern crate iron;
-extern crate router;
+extern crate staticfile;
+extern crate mount;
 
 use iron::prelude::*;
-use iron::status;
-use router::Router;
+use staticfile::Static;
+use mount::Mount;
+
+use std::path::Path;
 
 fn main() {
-    let mut router = Router::new();
-    router.get("/", hello, "helloworld");
-    router.get("/about", about, "about");
-    router.get("contact", contact, "contact");
 
-    Iron::new(router).http("localhost:3000").unwrap();
+    let mut mount = Mount::new();
 
-    fn hello(_: &mut Request) -> IronResult<Response> {
-        Ok(Response::with((status::Ok, "Hello World!")))
-    }
+    mount.mount("/", Static::new(Path::new("static/index.html")));
 
-    fn about(_: &mut Request) -> IronResult<Response> {
-        Ok(Response::with((status::Ok, "About")))
-    }
-
-    fn contact(_: &mut Request) -> IronResult<Response> {
-        Ok(Response::with((status::Ok, "Contact")))
-    }
+    Iron::new(mount).http("localhost:3000").unwrap();
 }
