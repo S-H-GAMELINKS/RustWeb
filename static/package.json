@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "build": "webpack --display-error-details"
+  },
   "dependencies": {
     "vue": "^2.5.17",
     "webpack": "^4.20.2",
