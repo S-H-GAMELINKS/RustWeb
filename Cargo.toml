@@ -5,3 +5,4 @@ authors = ["S-H-GAMELINKS <gamelinks007@gmail.com>"]
 
 [dependencies]
 iron = "0.6"
+router ="*"
