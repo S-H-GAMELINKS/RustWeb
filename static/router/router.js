@@ -1,8 +1,8 @@
 import Vue from 'vue/dist/vue.esm'
 import VueRouter from 'vue-router'
-import Index from '../components/index.vue'
-import About from '../components/about.vue'
-import Contact from '../components/contact.vue'
+import Index from '../components/web/index.vue'
+import About from '../components/web/about.vue'
+import Contact from '../components/web/contact.vue'
 
 Vue.use(VueRouter)
 

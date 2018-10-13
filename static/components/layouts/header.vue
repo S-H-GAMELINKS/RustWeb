@@ -7,9 +7,9 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="#">Home</a>
-      <a class="nav-item nav-link" href="#">About</a>
-      <a class="nav-item nav-link" href="#">Contact</a>
+      <router-link to="/" class="nav-item nav-link active">Home</router-link>
+      <router-link to="/about" class="nav-item nav-link active">About</router-link>
+      <router-link to="/contact" class="nav-item nav-link active">Contact</router-link>
     </div>
   </div>
 </nav>
