@@ -12,7 +12,7 @@ const app = new Vue({
     },
     data() {
         return {
-            text: "Awesome Iron!"
+            text: "Welcome to Iron! That's  Rust Web Application Framework!"
         }
     }
 })
